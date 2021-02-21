@@ -13,12 +13,12 @@ const Footer = () => {
           width={50}
           height={50}
         />
-        <h3>
+        <h4>
           Platzi Master
           <br />
           2021
-        </h3>
-        <h3>With love by Israel's Team</h3>
+        </h4>
+        <h4>With love by Israel's Team</h4>
       </div>
     </footer>
   );
