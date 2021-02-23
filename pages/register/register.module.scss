@@ -1,0 +1,53 @@
+.register {
+  height: 99vh;
+  width: 99vw;
+  margin: 0;
+  background: url('https://images.pexels.com/photos/5710/books-colorful-harry-potter.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  
+  &__main {
+    height: 60%;
+    width: 20%;
+    padding: 5px;
+    border-style: none;
+    background-color: #fffffe;
+    border-radius: 10%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 40%;
+      
+    & > h1 {
+      margin: 0;
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & > input {
+      height: 25px;
+      width: 80%;
+      border-radius: 2px;
+      border-style: solid;
+      align-self: center;
+    }
+
+    & > button {
+      height: 30px;
+      width: 40%;
+      color: #fffffe;
+      text-transform: uppercase;
+      background-color: #7F5AF0;
+      border-style: none;
+      align-self: center;
+    }
+  }
+}
