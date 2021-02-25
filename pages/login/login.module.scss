@@ -1,42 +1,57 @@
+@import '../globalStyles.module.scss';
+
 .login {
-  height: 50vh;
-  width: 99vw;
-  margin: 0;
-  background: url('https://images.pexels.com/photos/1319855/pexels-photo-1319855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  height: 101vh;
+  width: 101vw;
+  margin: -1%;
+  background: url('https://images.pexels.com/photos/5710/books-colorful-harry-potter.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
+  background-size: 100% 150%;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  position: fixed;
+
+  &__logo {
+    margin: 2%;
+    height: 60px;
+    width: 60px;
+    background-image: url('../../public/images/grit-readers.png');
+    background-size: contain;
+  }
   
   &__main {
-    height: 80%;
+    height: 50%;
     width: 25%;
     padding: 5px;
-    background-color: #fffffe;
+    background-color: $white-color;
     border-radius: 10%;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: absolute;
-    left: 130px;
-      
+    left: 37%;
+    
     & > h1 {
       margin: 0;
       width: 100%;
-      font-size: 15px;
+      font-family: $primary-font; 
+      font-size: 30px;
       text-align: center;
       text-transform: uppercase;
     }
 
     & > input {
-      height: 25px;
+      height: 35px;
       width: 80%;
       border-radius: 2px;
       border-style: solid;
       align-self: center;
+
+      &::placeholder {
+        font-family: $secondary-font; 
+        font-size: larger;
+        text-align: center;
+      }
     }
 
     & > div {
@@ -44,18 +59,24 @@
       align-self: center;
       display: flex;
       justify-content: space-between;
-
+      
       & > a {
         width: 30%;
         font-size: 10px;
         text-align: center;
+        font-family: $secondary-font; 
       }
       
       & > button {
+        height: 30px;
         width: 45%;
         text-transform: uppercase;
+        font-size: 15px;
+        font-family: $secondary-font; 
+        background-color: $secondary-color;
+        color: $white-color;
+        border-style: hidden;
       }
     }
-    
   }
 }

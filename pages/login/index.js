@@ -3,8 +3,9 @@ import styles from './login.module.scss';
 
 const Login = () => {
   return <div className={styles.login}>
+      <Link href="/"><a className={styles.login__logo}></a></Link>
       <div className={styles.login__main}>
-        <h1>Bienvenido a GritReaders</h1>
+        <h1>GritReaders</h1>
         <input placeholder="Usuario"></input>
         <input placeholder="Contraseña"></input>
         <div>
