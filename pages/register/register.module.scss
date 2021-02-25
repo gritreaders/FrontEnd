@@ -1,21 +1,30 @@
+@import '../globalStyles.module.scss';
+
 .register {
-  height: 99vh;
-  width: 99vw;
-  margin: 0;
+  height: 101vh;
+  width: 101vw;
+  margin: -1%;
   background: url('https://images.pexels.com/photos/5710/books-colorful-harry-potter.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 150%;
   border-radius: 5px;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  position: fixed;
+
+  &__logo {
+    margin: 2%;
+    height: 60px;
+    width: 60px;
+    background-image: url('../../public/images/grit-readers.png');
+    background-size: contain;
+  }
   
   &__main {
     height: 60%;
     width: 20%;
     padding: 5px;
     border-style: none;
-    background-color: #fffffe;
+    background-color: $white-color;
     border-radius: 10%;
     align-self: center;
     display: flex;
@@ -27,26 +36,34 @@
     & > h1 {
       margin: 0;
       width: 100%;
-      font-size: 15px;
+      font-family: $primary-font;
+      font-size: 30px;
       text-align: center;
       text-transform: uppercase;
     }
 
     & > input {
-      height: 25px;
+      height: 35px;
       width: 80%;
       border-radius: 2px;
       border-style: solid;
       align-self: center;
+
+      &::placeholder {
+        font-family: $secondary-font; 
+        font-size: larger;
+        text-align: center;
+      }
     }
 
     & > button {
       height: 30px;
       width: 40%;
-      color: #fffffe;
+      font-family: $secondary-font;
+      color: $white-color;
       text-transform: uppercase;
-      background-color: #7F5AF0;
-      border-style: none;
+      background-color: $secondary-color;
+      border-style: hidden;
       align-self: center;
     }
   }
