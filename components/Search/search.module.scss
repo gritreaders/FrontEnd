@@ -1,0 +1,11 @@
+@import '../../pages/globalStyles.module.scss';
+
+.container {
+  input {
+    border-radius: 20px;
+    border: 1px solid $white-color;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+  }
+}
