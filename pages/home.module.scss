@@ -1,0 +1,13 @@
+@import './globalStyles.module.scss';
+
+.main {
+  background-color: $primary-color;
+  min-height: calc(100vh - 140px);
+}
+.cardList {
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
