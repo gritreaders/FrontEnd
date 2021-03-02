@@ -1,0 +1,17 @@
+@import '../../pages/globalStyles.module.scss';
+
+.container {
+  width: 250px;
+  color: $white-color;
+  padding: 0 15px;
+  text-align: justify;
+  h4 {
+    padding-bottom: 10px;
+  }
+  h2 {
+    padding-bottom: 10px;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+}

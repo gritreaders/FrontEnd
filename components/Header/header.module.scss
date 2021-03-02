@@ -1,5 +1,7 @@
+@import '../../pages/globalStyles.module.scss';
+
 .header {
-  background-color: #1c1c24;
+  background-color: $background-color;
 }
 .container {
   margin: 0 auto;
