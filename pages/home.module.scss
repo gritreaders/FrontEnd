@@ -5,17 +5,33 @@
   min-height: calc(100vh - 140px);
 }
 
-.search {
+.container {
   max-width: 1128px;
   margin: 0 auto;
+}
+
+.search {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .cardList {
-  max-width: 1128px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.h1 {
+  font-size: 2rem;
+  color: $secondary-color;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.reviewList {
+  color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
 }
