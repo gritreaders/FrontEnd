@@ -1,19 +1,33 @@
-import Link from 'next/link' 
+import Link from 'next/link';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import styles from './login.module.scss';
 
 const Login = () => {
-  return <div className={styles.login}>
-      <Link href="/"><a className={styles.login__logo}></a></Link>
-      <div className={styles.login__main}>
-        <h1>GritReaders</h1>
-        <input placeholder="Usuario"></input>
-        <input placeholder="Contraseña"></input>
-        <div>
-          <Link href="/login"><a>Olvide la contraseña</a></Link>
-          <button>entrar</button>
+  return (
+    <>
+      <Header />
+        <div className={styles.login}>
+          <div className={styles.login__main}>
+            <p className={styles.login__main_logo} />
+            <h1>Sign-In into GritReaders</h1>
+            <div className={styles.login__main_box1}>
+              <input placeholder="Usuario"></input>
+              <input placeholder="Contraseña"></input>
+            </div>
+            <div className={styles.login__main_box2} >
+              <Link href="/login"><a>Forget password?</a></Link>
+              <button>login</button>
+              <p>
+                You are new in GritReader?
+                <Link href="/register"><a> Create Account</a></Link>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>;
+      <Footer />
+    </>
+  )
 };
 
 export default Login;
