@@ -1,70 +1,100 @@
 @import '../globalStyles.module.scss';
 
 .register {
-  height: 101vh;
-  width: 101vw;
-  margin: -1%;
-  background: url('https://images.pexels.com/photos/5710/books-colorful-harry-potter.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  height: 78vh;
+  width: 100%;
+  background-color: $background-color2;
   background-repeat: no-repeat;
   background-size: 100% 150%;
-  border-radius: 5px;
   display: flex;
-  position: fixed;
+  flex-direction: column;
 
-  &__logo {
-    margin: 2%;
-    height: 60px;
-    width: 60px;
-    background-image: url('../../public/images/grit-readers.png');
-    background-size: contain;
-  }
   
   &__main {
-    height: 60%;
-    width: 20%;
+    height: 75%;
+    width: 40%;
     padding: 5px;
-    border-style: none;
-    background-color: $white-color;
+    background-color: $background-color2;
     border-radius: 10%;
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: absolute;
-    left: 40%;
-      
-    & > h1 {
-      margin: 0;
-      width: 100%;
-      font-family: $primary-font;
-      font-size: 30px;
-      text-align: center;
-      text-transform: uppercase;
+    left: 30%;
+    
+    &_logo {
+      margin-bottom: 5%;
+      height: 20%;
+      width: 25%;
+      background-image: url('../../public/images/grit-readers-white.svg');
+      background-size: cover;
+      position: relative;
+      left: 38%;
     }
 
-    & > input {
-      height: 35px;
-      width: 80%;
-      border-radius: 2px;
-      border-style: solid;
-      align-self: center;
+    & > h1 {
+      margin: -5% 10% -5% 0;
+      width: 100%;
+      font-family: $primary-font;
+      color: $white-color;
+      font-size: 20px;
+      text-align: center;
+    }
 
-      &::placeholder {
-        font-family: $secondary-font; 
-        font-size: larger;
-        text-align: center;
+    &_box1 {
+      margin-top: 10%;
+      height: 40%;
+      width: 100%;
+      border-radius: 10px;
+      background-color: $grey-color1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      & > input {
+        margin: 10px 0;
+        height: 20%;
+        width: 90%;
+        border-radius: 7px;
+        border-style: solid;
+  
+        &::placeholder {
+          padding-left: 5px;
+          font-family: $secondary-font; 
+          font-size: small;
+          text-align: start;
+        }
       }
     }
 
-    & > button {
-      height: 30px;
-      width: 40%;
-      font-family: $secondary-font;
-      color: $white-color;
-      text-transform: uppercase;
-      background-color: $secondary-color;
-      border-style: hidden;
+    &_box2 {
+      width: 100%;
       align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      & > button {
+        margin-top: 20px;
+        height: 30px;
+        width: 25%;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: $secondary-font;
+        background-color: $secondary-color;
+        color: $white-color;
+        border-style: hidden;
+        border-radius: 10px;
+        align-self: center;
+      }
+
+      & > p {
+        margin-top: 20px;
+        align-self: center;
+        color: $font-color;
+      }
     }
   }
 }

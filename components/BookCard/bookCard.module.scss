@@ -1,0 +1,32 @@
+@import '../../pages/globalStyles.module.scss';
+
+.main {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__bookCard {
+    padding: 10px;
+    height: 200px;
+    width: 80vw;
+    background-color: $grey-color1;
+    display: flex;
+    justify-content: space-evenly;
+    color: $white-color;
+
+    &_img {
+      margin: 0;
+    }
+
+    &_left {
+      width: 60%;
+      font-size: 10px;
+      text-justify: newspaper;
+    }
+
+    &_right {
+      align-self: flex-end;
+    }
+  }
+}
