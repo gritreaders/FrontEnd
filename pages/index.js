@@ -6,10 +6,30 @@ import Review from '../components/Review/Review'
 import Search from '../components/Search/Search'
 import styles from './home.module.scss'
 
+import { useQuery } from 'react-query'
+
 const HomePage = () => {
+  // const { isLoading, error, data } = useQuery('todos', () =>
+  //   fetch('https://gritreaders-ca-api.herokuapp.com/api/v1/users').then((res) =>
+  //     res.json()
+  //   )
+  // )
+
+  // if (isLoading) return 'Loading....'
+  // if (error) return `An error has ocurred, ${error.message}`
+
   return (
     <>
       <Header />
+      {/* {data &&
+        data.map((user) => {
+          return (
+            <div key={user.userId}>
+              <p>{user.firstName}</p>
+              <p>{user.lastName}</p>
+            </div>
+          )
+        })} */}
       <section className={styles.main}>
         <div className={styles.container}>
           <div className={styles.search}>
