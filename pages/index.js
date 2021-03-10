@@ -10,6 +10,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
+
       <section className={styles.main}>
         <div className={styles.container}>
           <div className={styles.search}>

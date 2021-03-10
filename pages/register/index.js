@@ -1,17 +1,98 @@
-import Link from 'next/link';
-import styles from './register.module.scss';
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import styles from './register.module.scss'
+import axios from 'axios'
+import { useMutation } from 'react-query'
 
 const Register = () => {
-  return <div className={styles.register}>
-      <Link href="/"><a className={styles.register__logo}></a></Link>
-      <div className={styles.register__main}>
-        <h1>Registrese a GritReaders</h1>
-        <input placeholder="Name"></input>
-        <input placeholder="Email"></input>
-        <input placeholder="Contraseña"></input>
-        <button>Sign Up</button>
-      </div>
-    </div>;
-};
+  const [form, formValues] = useState({})
+  const router = useRouter()
 
-export default Register;
+  const fetchRegister = async () => {
+    const register = await axios({
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signup',
+      method: 'post',
+      eaders: { 'content-type': 'application/json' },
+      data: form,
+    })
+    return register
+  }
+
+  const mutation = useMutation(fetchRegister, {
+    onSuccess: (data) => {
+      router.push('/login')
+    },
+    onError: (err) => {
+      console.log(err)
+    },
+  })
+
+  const handleRegister = (event) => {
+    event.preventDefault()
+    mutation.mutate(JSON.stringify(form))
+  }
+
+  const updateInput = (event) => {
+    formValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    })
+  }
+
+  return (
+    <>
+      <Header />
+      <div className={styles.register}>
+        <div className={styles.register__main}>
+          <p className={styles.register__main_logo} />
+          <h1>Registrese a GritReaders</h1>
+          <form
+            className={styles.register__main_box1}
+            onSubmit={handleRegister}
+          >
+            <input
+              type="text"
+              name="firstName"
+              onChange={updateInput}
+              placeholder="Name"
+            ></input>
+            <input
+              type="text"
+              name="lastName"
+              onChange={updateInput}
+              placeholder="Last Name"
+            ></input>
+            <input
+              type="text"
+              name="email"
+              onChange={updateInput}
+              placeholder="Email"
+            ></input>
+            <input
+              type="text"
+              name="password"
+              onChange={updateInput}
+              placeholder="Contraseña"
+            ></input>
+            <button>Register</button>
+          </form>
+          <div className={styles.register__main_box2}>
+            <p>
+              Do you already have an account?
+              <Link href="/login">
+                <a> Login to your account</a>
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+
+export default Register
