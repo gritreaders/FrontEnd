@@ -1,45 +1,41 @@
-import { useState, useEffect } from 'react'
-
+import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import styles from './login.module.scss'
 
-import { useMutation, useQuery } from 'react-query'
-
-const axios = require('axios')
+import { useMutation } from 'react-query'
+import axios from 'axios'
 
 const Login = () => {
-  const user = {
-    email: 'user3@gmail.com',
-    password: '12345678',
+  const [form, formValues] = useState({})
+  const router = useRouter()
+
+  const fetchUser = async () => {
+    const login = await axios({
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signin',
+      method: 'post',
+      headers: { 'content-type': 'application/json' },
+      data: form,
+    })
+    return login
   }
 
-  // const fetchUser = async () => {
-  //   const login = await axios({
-  //     url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signin',
-  //     method: 'post',
-  //     headers: { 'content-type': 'application/json' },
-  //     data: user,
-  //   }).then((res) => res.json())
-  //   return login
-  // }
-
-  const mutation = useMutation((form) => {
-    return axios({
-      method: 'post',
-      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signin',
-      headers: { 'content-type': 'application/json' },
-      data: JSON.stringify(form),
-    })
+  const mutation = useMutation(fetchUser, {
+    onSuccess: (data) => {
+      router.push('/')
+    },
+    onError: (err) => {
+      console.log(err)
+    },
   })
 
   const handleLogin = (event) => {
     event.preventDefault()
     mutation.mutate(JSON.stringify(form))
   }
-
-  const [form, formValues] = useState({})
 
   const updateInput = (event) => {
     formValues({
@@ -54,6 +50,7 @@ const Login = () => {
       <div className={styles.login}>
         <div className={styles.login__main}>
           <p className={styles.login__main_logo} />
+          {mutation.isError ? <p>{mutation.error.message} </p> : null}
           <h1>Sign-In into GritReaders</h1>
           <form className={styles.login__main_box1} onSubmit={handleLogin}>
             <input
