@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Modal from '../../components/Modal/Modal'
-import styles from './register.module.scss'
+import styles from './editProfile.module.scss'
 import axios from 'axios'
 import { useMutation } from 'react-query'
 
@@ -79,7 +79,14 @@ const Register = () => {
               onChange={updateInput}
               placeholder="Contraseña"
             ></input>
-            <button>Register</button>
+            <div className={styles.register__main_box1_button}>
+              <button className={styles.register__main_box1_button_b1}>
+                Save
+              </button>
+              <button className={styles.register__main_box1_button_b2}>
+                Cancel
+              </button>
+            </div>
           </form>
           <div className={styles.register__main_box2}>
             <p>
@@ -93,8 +100,7 @@ const Register = () => {
       </div>
       <Footer />
       <Modal 
-        content="User Registered Succesfully 😎"
-        button1="Ok"
+        content="Your Changes have been saved 😎"
       />
     </>
   )

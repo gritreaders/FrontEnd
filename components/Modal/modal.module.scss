@@ -1,0 +1,46 @@
+@import '../../pages/globalStyles.module.scss';
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $font-color, $alpha: 0.4);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    &__modal {
+        height: 150px;
+        width: 250px;
+        background-color: $white-color;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+
+        &_title {
+            margin: 10%;
+            color: $grey-color1;
+            font-family: $primary-font;
+            font-size: 80%;
+            text-align: center;
+        }
+
+        &_button {
+            height: 25%;
+            width: 20%;
+
+            & > button {
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                border-style: hidden;
+                background-color: $alternative-color;
+                color: $white-color;
+            }
+        }
+    }
+}
