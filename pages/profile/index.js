@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import UserProfile from '../../components/UserProfile/UserProfile'
 import ReadBook from '../../components/ReadBook/ReadBook'
 import MyReview from '../../components/MyReview/MyReview'
+import Pager from '../../components/Pager/Pager'
 import styles from './profile.module.scss'
 
 const Profile = () => {
@@ -58,7 +59,7 @@ const Profile = () => {
               <MyReview />
               <MyReview />
               <MyReview />
-              pager
+              <Pager />
             </div>
           </div>
         </div>
