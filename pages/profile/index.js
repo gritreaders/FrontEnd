@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import UserProfile from '../../components/UserProfile/UserProfile'
 import ReadBook from '../../components/ReadBook/ReadBook'
+import MyReview from '../../components/MyReview/MyReview'
 import styles from './profile.module.scss'
 
 const Profile = () => {
@@ -51,7 +52,12 @@ const Profile = () => {
           <div className={styles.myReviews}>
             <h3 className={styles.myReviews__title}>MY REVIEWS</h3>
             <div className={styles.reviewContainer}>
-              review
+              <MyReview />
+              <MyReview />
+              <MyReview />
+              <MyReview />
+              <MyReview />
+              <MyReview />
               pager
             </div>
           </div>

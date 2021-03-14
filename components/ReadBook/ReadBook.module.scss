@@ -27,6 +27,7 @@
 }
 .readBook__autor {
   font-size: 1em;
+  font-family: $secondary-font;
   font-weight: 300;
   color: $gray-7-color;
 }
@@ -44,7 +45,6 @@
 }
 
 .readBook__title,
-.readBook
-+__autor {
+.readBook {
   margin-bottom: 5px;
 }

@@ -7,7 +7,7 @@ import styles from './ReadBook.module.scss'
 
 const ReadBook = () => {
   return (
-    <Link href='/login'>
+    <Link href='/'>
       <div className={styles.readBook}>
         <Image
           className={styles.readBook__img}
