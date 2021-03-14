@@ -1,0 +1,23 @@
+@import '../../pages/globalStyles.module.scss';
+
+.pager {
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px auto;
+}
+.pager__button {
+  background: $gray-13-color;
+  /*   width: 30px;
+  height: 30px; */
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: $gray-1-color;
+}
+.pager__buttonSingle {
+  padding: 5px;
+  text-decoration: none;
+  color: $gray-9-color;
+}
