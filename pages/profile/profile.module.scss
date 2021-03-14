@@ -1,0 +1,65 @@
+@import '../globalStyles.module.scss';
+
+.main {
+  width: 100%;
+  background-color: $background-color2;
+  padding-bottom: 70px;
+}
+.mainContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  margin: auto;
+}
+.readingFinished {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  border-radius: 5px;
+  padding: 20px 0;
+  margin-right: 40px;
+  background-color: rgb(255, 255, 255, 0.02);
+}
+.reading {
+  margin-bottom: 50px;
+}
+.reading,
+.finished {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 274px;
+}
+.reading__text,
+.finished__text {
+  display: flex;
+  margin-bottom: 20px;
+}
+.reading__title,
+.finished__title {
+  font-size: 1.5em;
+  font-family: $primary-font;
+  font-weight: 600;
+  color: $secondary-color;
+  margin-right: 20px;
+}
+
+/* MY REVIEWS */
+.myReviews {
+  width: 100%;
+}
+.myReviews__title {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: $primary-font;
+  color: $secondary-color;
+  margin-bottom: 40px;
+}
+
+.reviewContainer {
+  max-width: 550px;
+  margin: auto;
+}
