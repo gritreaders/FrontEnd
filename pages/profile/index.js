@@ -2,13 +2,14 @@ import React from 'react'
 import Image from 'next/image';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import UserProfile from '../../components/UserProfile/UserProfile'
 import styles from './profile.module.scss'
 
 const Profile = () => {
   return (
     <>
       <Header />
-      userprofile
+      <UserProfile />
       <section className={styles.main}>
         <div className={styles.mainContainer}>
           <div className={styles.readingFinished}>
