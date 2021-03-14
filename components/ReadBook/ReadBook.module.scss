@@ -1,0 +1,50 @@
+@import '../../pages/globalStyles.module.scss';
+
+.readBook {
+  max-width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.readBook__img {
+  width: 80px;
+  height: 120px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.readBook__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.readBook__title {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: $secondary-font;
+  color: $gray-11-color;
+}
+.readBook__autor {
+  font-size: 1em;
+  font-weight: 300;
+  color: $gray-7-color;
+}
+.readBook__autor span {
+  margin-right: 5px;
+}
+.readBook__qualification {
+  display: flex;
+  align-items: center;
+}
+.readBook__number {
+  font-size: 18px;
+  margin-right: 10px;
+  color: $gray-11-color;
+}
+
+.readBook__title,
+.readBook
++__autor {
+  margin-bottom: 5px;
+}

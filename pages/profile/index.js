@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import UserProfile from '../../components/UserProfile/UserProfile'
+import ReadBook from '../../components/ReadBook/ReadBook'
 import styles from './profile.module.scss'
 
 const Profile = () => {
@@ -24,7 +25,9 @@ const Profile = () => {
                   height={30}
                 />
               </div>
-              cardread
+              <ReadBook />
+              <ReadBook />
+              <ReadBook />
             </div>
             <div className={styles.finished}>
               <div className={styles.finished__text}>
@@ -37,7 +40,12 @@ const Profile = () => {
                   height={30}
                 />
               </div>
-              cardread
+              <ReadBook />
+              <ReadBook />
+              <ReadBook />
+              <ReadBook />
+              <ReadBook />
+              <ReadBook />
             </div>
           </div>
           <div className={styles.myReviews}>
