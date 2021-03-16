@@ -15,7 +15,7 @@ const Login = () => {
 
   const fetchUser = async () => {
     const login = await axios({
-      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signin',
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signIn',
       method: 'post',
       headers: { 'content-type': 'application/json' },
       data: form,
@@ -28,7 +28,8 @@ const Login = () => {
       router.push('/')
     },
     onError: (err) => {
-      console.log(err)
+      console.log(err.message)
+      console.log(err.statusCode)
     },
   })
 
@@ -50,7 +51,7 @@ const Login = () => {
       <div className={styles.login}>
         <div className={styles.login__main}>
           <p className={styles.login__main_logo} />
-          {mutation.isError ? <p>{mutation.error.message} </p> : null}
+          {/* {mutation.isError ? <p>{mutation.error.message} </p> : null} */}
           <h1>Sign-In into GritReaders</h1>
           <form className={styles.login__main_box1} onSubmit={handleLogin}>
             <input

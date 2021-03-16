@@ -15,7 +15,7 @@ const Register = () => {
 
   const fetchRegister = async () => {
     const register = await axios({
-      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signup',
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signUp',
       method: 'post',
       eaders: { 'content-type': 'application/json' },
       data: form,
@@ -49,7 +49,13 @@ const Register = () => {
       <Header />
       <div className={styles.register}>
         <div className={styles.register__main}>
-          <p className={styles.register__main_logo} />
+          <figure>
+            <img
+              className={styles.register__main_logo}
+              src="images/grit-readers-white.svg"
+              alt="logo"
+            />
+          </figure>
           <h1>Registrese a GritReaders</h1>
           <form
             className={styles.register__main_box1}

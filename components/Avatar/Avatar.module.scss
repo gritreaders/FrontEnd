@@ -1,0 +1,68 @@
+@import '../../pages/globalStyles.module.scss';
+
+.menu{
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: $secondary-font;
+  ul{
+    display: none;
+    list-style: none;
+    padding: 1px;
+    margin-top: 215px;
+    position: absolute;
+    width: 235px;
+    height: 146px;
+  }
+  li{
+     height: 70px;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    padding-left: 31px;
+    a{
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      margin-right: 25px;
+    }
+    a:hover{
+      color: $secondary-color;
+      text-decoration: underline $secondary-color;
+    }
+  }
+  li:nth-child(1){
+    border-bottom: 1px solid white;
+  }
+  li:nth-child(2){
+    border-bottom: 1px solid white;
+  }
+  li:nth-child(3){
+    border-bottom: 1px solid white;
+  }
+}
+
+.menu:hover{
+  ul{
+    display: block;
+
+  }
+}
+
+.profile{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  img{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+  }
+  p{
+    color: white;
+    font-size: 20px;
+  }
+}
