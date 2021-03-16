@@ -14,7 +14,7 @@ const Register = () => {
 
   const fetchRegister = async () => {
     const register = await axios({
-      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signup',
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signUp',
       method: 'post',
       eaders: { 'content-type': 'application/json' },
       data: form,
