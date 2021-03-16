@@ -1,0 +1,29 @@
+@import '../../pages/globalStyles.module.scss';
+
+.e404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: $background-color2;
+}
+.e404__Message {
+  font-family: $tertiary-font;
+  font-size: 46px;
+  color: $negative-color;
+}
+.e404__Number {
+  font-size: 60px;
+  color: $gray-13-color;
+  font-family: $secondary-font;
+}
+.e404__Type {
+  font-size: 16px;
+  color: $gray-13-color;
+  font-family: $secondary-font;
+}
+.e404__Img {
+  width: 420px;
+}

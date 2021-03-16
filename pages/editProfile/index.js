@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Modal from '../../components/Modal/Modal'
-import styles from './register.module.scss'
+import styles from './editProfile.module.scss'
 import axios from 'axios'
 import { useMutation } from 'react-query'
 
@@ -15,7 +15,7 @@ const Register = () => {
 
   const fetchRegister = async () => {
     const register = await axios({
-      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signUp',
+      url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signup',
       method: 'post',
       eaders: { 'content-type': 'application/json' },
       data: form,
@@ -49,13 +49,7 @@ const Register = () => {
       <Header />
       <div className={styles.register}>
         <div className={styles.register__main}>
-          <figure>
-            <img
-              className={styles.register__main_logo}
-              src="images/grit-readers-white.svg"
-              alt="logo"
-            />
-          </figure>
+          <p className={styles.register__main_logo} />
           <h1>Registrese a GritReaders</h1>
           <form
             className={styles.register__main_box1}
@@ -85,7 +79,14 @@ const Register = () => {
               onChange={updateInput}
               placeholder="Contraseña"
             ></input>
-            <button>Register</button>
+            <div className={styles.register__main_box1_button}>
+              <button className={styles.register__main_box1_button_b1}>
+                Save
+              </button>
+              <button className={styles.register__main_box1_button_b2}>
+                Cancel
+              </button>
+            </div>
           </form>
           <div className={styles.register__main_box2}>
             <p>
@@ -99,8 +100,7 @@ const Register = () => {
       </div>
       <Footer />
       <Modal 
-        content="User Registered Succesfully 😎"
-        button1="Ok"
+        content="Your Changes have been saved 😎"
       />
     </>
   )
