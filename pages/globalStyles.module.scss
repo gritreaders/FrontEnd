@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:ital,wght@0,300;0,500;1,300&display=swap');
 
+/* Fonts */
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
 /* Global Variables */
-$background-color: #0C0C0D;
-$background-color2: #1C1C24;
 $font-color: #94a1b2;
 $primary-color: #16161a;
 $secondary-color: #7f5af0;
@@ -11,5 +13,31 @@ $white-color: #fffffe;
 $orange-color: #FFA41C;
 $grey-color1: #33333a;
 
-$primary-font: 'Inter', sans-serif;
-$secondary-font: 'Roboto', sans-serif;
+/* + or - colors */
+$positive-color: #2cb67d;
+$negative-color: #f05a5a;
+
+/* Background color */
+$background-color: #0C0C0D;
+$background-color2: #1C1C24;
+
+/* grayScale */
+$gray-1-color: #0c0c0d;
+$gray-2-color: #1c1c1d;
+$gray-3-color: #313131;
+$gray-4-color: #454546;
+$gray-5-color: #5a5a5a;
+$gray-6-color: #6e6e6f;
+$gray-7-color: #838383;
+$gray-8-color: #989898;
+$gray-9-color: #acacad;
+$gray-10-color: #c1c1c1;
+$gray-11-color: #d6d6d6;
+$gray-12-color: #eaeaea;
+$gray-13-color: #f5f5f5;
+$gray-14-color: #f2f2f2;
+$gray-15-color: #f1f1f1;
+$white-color: #fff;
+
+
+
