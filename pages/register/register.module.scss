@@ -27,7 +27,6 @@
       width: 200px;
       margin-top: 20px;
       object-fit: contain;
-
       background-repeat: no-repeat;
       position: relative;
     }
@@ -41,8 +40,9 @@
     }
 
     &_box1 {
+      margin: 10px 0 2px 0;
       height: 40%;
-      padding: 30px 0;
+      padding: 10px 0;
       width: 100%;
       border-radius: 10px;
       background-color: $grey-color1;
@@ -52,7 +52,7 @@
       justify-content: center;
 
       & > input {
-        margin: 10px 0;
+        margin: 5px 0;
         height: 30px;
         width: 90%;
         border-radius: 7px;
@@ -65,19 +65,7 @@
           text-align: start;
         }
       }
-      & > button {
-        margin-top: 20px;
-        height: 30px;
-        width: 25%;
-        text-transform: uppercase;
-        font-size: 15px;
-        font-family: $secondary-font;
-        background-color: $secondary-color;
-        color: $white-color;
-        border-style: hidden;
-        border-radius: 10px;
-        align-self: center;
-      }
+
     }
 
     &_box2 {
@@ -87,10 +75,54 @@
       flex-direction: column;
       justify-content: space-around;
 
+      & > button {
+        margin-top: 20px;
+        height: 30px;
+        width: 30%;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: $secondary-font;
+        background-color: $secondary-color;
+        color: $white-color;
+        border-style: hidden;
+        border-radius: 10px;
+        align-self: center;
+      }
+
       & > p {
         margin-top: 20px;
         align-self: center;
         color: $font-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 320px) {
+  .register {
+    &__main {
+      width: 60%;
+      &_logo {
+        height: 70px;
+        width: 100px;
+      }
+      &_box1 {
+        margin: 2px 0;
+        padding: 10px;
+      }
+      &_box2 {
+        padding: 5px;
+        height: 20px;
+        text-align: center;
+        & > a {
+          width: 100%;
+        }
+        & > button {
+          width: 100px;
+        }
       }
     }
   }

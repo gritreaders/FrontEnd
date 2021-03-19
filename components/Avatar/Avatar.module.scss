@@ -14,9 +14,11 @@
     position: absolute;
     width: 235px;
     height: 146px;
+    right: 170px;
+    z-index: 2;
   }
   li{
-     height: 70px;
+    height: 70px;
     background-color: #161616;
     display: flex;
     align-items: center;
@@ -46,7 +48,6 @@
 .menu:hover{
   ul{
     display: block;
-
   }
 }
 
@@ -64,5 +65,29 @@
   p{
     color: white;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    ul {
+      right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    ul {
+      position: fixed;
+      left: 0;
+      li {
+        height: calc(90vh / 4);
+        width: 100vw;
+        a {
+          padding-left: 30%;
+        }
+      }
+    }
   }
 }
