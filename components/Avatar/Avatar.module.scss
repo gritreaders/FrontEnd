@@ -18,6 +18,7 @@
     z-index: 2;
   }
   li{
+    margin: -1px;
     height: 70px;
     background-color: #161616;
     display: flex;
@@ -33,15 +34,6 @@
       color: $secondary-color;
       text-decoration: underline $secondary-color;
     }
-  }
-  li:nth-child(1){
-    border-bottom: 1px solid white;
-  }
-  li:nth-child(2){
-    border-bottom: 1px solid white;
-  }
-  li:nth-child(3){
-    border-bottom: 1px solid white;
   }
 }
 
@@ -81,8 +73,9 @@
     ul {
       position: fixed;
       left: 0;
+      border: none;
       li {
-        height: calc(90vh / 4);
+        height: calc(95vh / 4);
         width: 100vw;
         a {
           padding-left: 30%;

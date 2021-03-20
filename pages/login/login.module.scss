@@ -108,8 +108,9 @@
 @media screen and (max-width: 768px) {
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .login {
+    padding-top: 67px;
     &__main {
       width: 60%;
       &_logo {
