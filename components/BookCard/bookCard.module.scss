@@ -1,32 +1,84 @@
 @import '../../pages/globalStyles.module.scss';
 
 .main {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 50px 0;
 
   &__bookCard {
     padding: 10px;
-    height: 200px;
-    width: 80vw;
-    background-color: $grey-color1;
+    height: 100%;
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
-    color: $white-color;
-
+    align-items: center;
+    color: $gray-10-color;
+    
     &_img {
       margin: 0;
     }
-
-    &_left {
+    
+    &_up {
       width: 60%;
       font-size: 10px;
-      text-justify: newspaper;
+      
+      & > h1 {
+        font-family: $primary-font;
+        font-size: 2em;
+      }
+      
+      & > div {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        text-align: justify;
+        
+        & > p {
+          margin: 5px 0;
+        }
+      }
     }
 
-    &_right {
+    &_down {
+      margin-top: 10px;
       align-self: flex-end;
+      display: flex;
+      justify-content: space-between;
+      font-family: $secondary-font;
+
+      &_right {
+        font-size: 1.5em;
+        color: $gray-7-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    &__bookCard {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    height: auto;
+
+    &__bookCard {
+      flex-wrap: wrap;
+
+      &_up {
+        margin-top: 20px;
+      }
+
+      &_down {
+        &_right {
+          font-size: 1em;
+        }
+      }
     }
   }
 }

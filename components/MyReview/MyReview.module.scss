@@ -16,7 +16,15 @@
   margin: 10px 0;
 }
 
-.myReview__trash-edit {
+.myReview__trashEdit {
   display: flex;
   margin-top: 10px;
+}
+
+.myReview_button {
+  margin: 0 20px;
+  border: none;
+  background-color: inherit;
+  color: $white-color;
+  font-size: 30px;
 }

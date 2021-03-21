@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { AiOutlineUpload } from "react-icons/ai";
 import Link from 'next/link'
 
 import Header from '../../components/Header/Header'
@@ -44,23 +45,32 @@ const editProfile = () => {
     })
   }
 
+  const user = {
+    value: false,
+    name: "Nombre de Usuario"
+  }
+
   return (
     <>
       <Header />
       <div className={styles.editProfile}>
         <div className={styles.editProfile__main}>
-          <figure>
-            <img
-              className={styles.editProfile__main_logo}
-              src="images/grit-readers-white.svg"
-              alt="logo"
-            />
-          </figure>
-          <h1>Registrese a GritReaders</h1>
+          <img
+            className={styles.editProfile__main_logo}
+            src="images/photo.png"
+            alt="logo"
+          />
+          <h1>{user.value ? `${user.name}` : "Usuario"}</h1>
           <form
             className={styles.editProfile__main_box1}
             onSubmit={handleEditProfile}
           >
+            <div>
+              <button>
+                <AiOutlineUpload />
+              </button>
+              <h3>Load image</h3>
+            </div>
             <input
               type="text"
               name="firstName"

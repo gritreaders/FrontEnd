@@ -11,5 +11,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  color: #ffffff;
+  color: $white-color;
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      & > img {
+        display: none;
+      }
+    }
+  }
 }
