@@ -25,6 +25,7 @@ const Login = () => {
 
   const mutation = useMutation(fetchUser, {
     onSuccess: (data) => {
+      localStorage.setItem('user',JSON.stringify(data.data))
       router.push('/')
     },
     onError: (err) => {
