@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { useMutation } from 'react-query'
 import Link from 'next/link'
 
 import Header from '../../components/Header/Header'
@@ -7,7 +8,6 @@ import Footer from '../../components/Footer/Footer'
 import Modal from '../../components/Modal/Modal'
 import styles from './register.module.scss'
 import axios from 'axios'
-import { useMutation } from 'react-query'
 
 const Register = () => {
   const [form, formValues] = useState({})
@@ -17,14 +17,14 @@ const Register = () => {
     const register = await axios({
       url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signUp',
       method: 'post',
-      eaders: { 'content-type': 'application/json' },
+      headers: { 'content-type': 'application/json' },
       data: form,
     })
     return register
   }
 
   const mutation = useMutation(fetchRegister, {
-    onSuccess: (data) => {
+    onSuccess: () => {
       router.push('/login')
     },
     onError: (err) => {
@@ -98,10 +98,7 @@ const Register = () => {
         </div>
       </div>
       <Footer />
-      <Modal 
-        content="User Registered Succesfully 😎"
-        button1="Ok"
-      />
+      <Modal content="User Registered Succesfully 😎" button1="Ok" />
     </>
   )
 }

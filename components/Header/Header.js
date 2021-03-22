@@ -7,7 +7,7 @@ import Avatar from '../Avatar/Avatar'
 import SingInSingUp from '../SingInSingUp/SingInSingUp'
 
 const Header = () => {
-  const user = true
+  const user = localStorage.getItem('user')
 
   return (
     <header className={styles.header}>

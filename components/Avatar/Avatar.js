@@ -7,11 +7,13 @@ const IMAGEN_DEFAULT =
   'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'
 
 const Avatar = () => {
+  const user = JSON.parse(localStorage.getItem('user'))
+
   return (
     <div className={styles.menu}>
       <div className={styles.profile}>
-        <img src={IMAGEN_DEFAULT} alt="" />
-        <p>Ruben</p>
+        <img src={!user ? IMAGEN_DEFAULT : user.avatarUrl} alt="" />
+        <p>{user.firstName}</p>
       </div>
       <ul>
         <li>

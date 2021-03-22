@@ -21,6 +21,26 @@
   justify-content: center;
 }
 
+.paginador {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  button {
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 2rem;
+  }
+  p {
+    color: $white-color;
+    text-align: center;
+    width: 30px;
+  }
+}
+
 .h1 {
   font-size: 2rem;
   color: $secondary-color;
