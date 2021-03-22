@@ -12,7 +12,7 @@ const Avatar = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.profile}>
-        <img src={IMAGEN_DEFAULT} alt="" />
+        <img src={!user ? IMAGEN_DEFAULT : user.avatarUrl} alt="" />
         <p>{user.firstName}</p>
       </div>
       <ul>
