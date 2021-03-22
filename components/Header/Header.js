@@ -12,7 +12,12 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <img src="/images/grit-readers.png" alt="Logo" width={50} height={50} />
+        <img
+          src='/images/grit-readers3.png'
+          alt='Logo'
+          width={250}
+          height={50}
+        />
         <div>{user ? <Avatar /> : <SingInSingUp />}</div>
       </div>
     </header>

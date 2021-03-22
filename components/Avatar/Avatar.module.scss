@@ -14,9 +14,12 @@
     position: absolute;
     width: 235px;
     height: 146px;
+    right: 170px;
+    z-index: 2;
   }
   li{
-     height: 70px;
+    margin: -1px;
+    height: 70px;
     background-color: #161616;
     display: flex;
     align-items: center;
@@ -32,21 +35,11 @@
       text-decoration: underline $secondary-color;
     }
   }
-  li:nth-child(1){
-    border-bottom: 1px solid white;
-  }
-  li:nth-child(2){
-    border-bottom: 1px solid white;
-  }
-  li:nth-child(3){
-    border-bottom: 1px solid white;
-  }
 }
 
 .menu:hover{
   ul{
     display: block;
-
   }
 }
 
@@ -64,5 +57,30 @@
   p{
     color: white;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    ul {
+      right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    ul {
+      position: fixed;
+      left: 0;
+      border: none;
+      li {
+        height: calc(95vh / 4);
+        width: 100vw;
+        a {
+          padding-left: 30%;
+        }
+      }
+    }
   }
 }

@@ -85,9 +85,9 @@ const Register = () => {
               onChange={updateInput}
               placeholder="Contraseña"
             ></input>
-            <button>Register</button>
           </form>
           <div className={styles.register__main_box2}>
+            <button>Register</button>
             <p>
               Do you already have an account?
               <Link href="/login">

@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <Image
-          src='/images/grit-readers.png'
+        <img
+          src='/images/grit-readers3.png'
           alt='Logo'
-          width={50}
+          width={250}
           height={50}
         />
         <h4>

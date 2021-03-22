@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import ReadBook from '../../components/ReadBook/ReadBook'
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 import styles from './MyReview.module.scss'
 
@@ -26,20 +25,13 @@ const MyReview = () => {
       </a>
 
       <div className={styles.myReview__trashEdit}>
-        <Image
-          className={styles.readBook__img}
-          src='/images/trash-solid.svg'
-          alt='bookImg'
-          width={30}
-          height={30}
-        />
-          <Image
-          className={styles.readBook__img}
-          src='/images/edit-solid.svg'
-          alt='bookImg'
-          width={30}
-          height={30}
-        />
+        <button className={styles.myReview_button}>
+          <FaTrash/>
+        </button>
+        <button className={styles.myReview_button}>
+          <FaEdit/>
+        </button>
+      />
       </div>
     </div>
   )

@@ -50,7 +50,13 @@ const Login = () => {
       <Header />
       <div className={styles.login}>
         <div className={styles.login__main}>
-          <p className={styles.login__main_logo} />
+          <figure>
+            <img
+              className={styles.login__main_logo}
+              src="images/grit-readers-white.svg"
+              alt="logo"
+            />
+          </figure>
           {/* {mutation.isError ? <p>{mutation.error.message} </p> : null} */}
           <h1>Sign-In into GritReaders</h1>
           <form className={styles.login__main_box1} onSubmit={handleLogin}>
@@ -66,12 +72,12 @@ const Login = () => {
               placeholder="Contraseña"
               onChange={updateInput}
             ></input>
-            <button>login</button>
           </form>
           <div className={styles.login__main_box2}>
             <Link href="/login">
               <a>Forget password?</a>
             </Link>
+            <button>login</button>
             <p>
               You are new in GritReader?
               <Link href="/register">

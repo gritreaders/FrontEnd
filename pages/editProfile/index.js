@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { AiOutlineUpload } from "react-icons/ai";
 import Link from 'next/link'
 
 import Header from '../../components/Header/Header'
@@ -9,21 +10,21 @@ import styles from './editProfile.module.scss'
 import axios from 'axios'
 import { useMutation } from 'react-query'
 
-const Register = () => {
+const editProfile = () => {
   const [form, formValues] = useState({})
   const router = useRouter()
 
-  const fetchRegister = async () => {
-    const register = await axios({
+  const fetchEditProfile = async () => {
+    const editProfile = await axios({
       url: 'https://gritreaders-ca-api.herokuapp.com/api/v1/auth/signup',
       method: 'post',
       eaders: { 'content-type': 'application/json' },
       data: form,
     })
-    return register
+    return editProfile
   }
 
-  const mutation = useMutation(fetchRegister, {
+  const mutation = useMutation(fetchEditProfile, {
     onSuccess: (data) => {
       router.push('/login')
     },
@@ -32,7 +33,7 @@ const Register = () => {
     },
   })
 
-  const handleRegister = (event) => {
+  const handleEditProfile = (event) => {
     event.preventDefault()
     mutation.mutate(JSON.stringify(form))
   }
@@ -44,17 +45,32 @@ const Register = () => {
     })
   }
 
+  const user = {
+    value: false,
+    name: "Nombre de Usuario"
+  }
+
   return (
     <>
       <Header />
-      <div className={styles.register}>
-        <div className={styles.register__main}>
-          <p className={styles.register__main_logo} />
-          <h1>Registrese a GritReaders</h1>
+      <div className={styles.editProfile}>
+        <div className={styles.editProfile__main}>
+          <img
+            className={styles.editProfile__main_logo}
+            src="images/photo.png"
+            alt="logo"
+          />
+          <h1>{user.value ? `${user.name}` : "Usuario"}</h1>
           <form
-            className={styles.register__main_box1}
-            onSubmit={handleRegister}
+            className={styles.editProfile__main_box1}
+            onSubmit={handleEditProfile}
           >
+            <div>
+              <button>
+                <AiOutlineUpload />
+              </button>
+              <h3>Load image</h3>
+            </div>
             <input
               type="text"
               name="firstName"
@@ -79,22 +95,14 @@ const Register = () => {
               onChange={updateInput}
               placeholder="Contraseña"
             ></input>
-            <div className={styles.register__main_box1_button}>
-              <button className={styles.register__main_box1_button_b1}>
-                Save
-              </button>
-              <button className={styles.register__main_box1_button_b2}>
-                Cancel
-              </button>
-            </div>
           </form>
-          <div className={styles.register__main_box2}>
-            <p>
-              Do you already have an account?
-              <Link href="/login">
-                <a> Login to your account</a>
-              </Link>
-            </p>
+          <div className={styles.editProfile__main_box2}>
+            <button className={styles.editProfile__main_box2_button1}>
+              Save
+            </button>
+            <button className={styles.editProfile__main_box2_button2}>
+              Cancel
+            </button>
           </div>
         </div>
       </div>
@@ -106,4 +114,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default editProfile

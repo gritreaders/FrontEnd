@@ -35,3 +35,27 @@
   flex-wrap: wrap;
   padding-bottom: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .search {
+    margin-left: 15px;
+  }
+  .h1 {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .reviewList {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    padding-top: 70px;
+  }
+  .search {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
