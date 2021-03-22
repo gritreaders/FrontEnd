@@ -17,7 +17,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <img
-          src='/images/grit-readers3.png'
+          src='/images/Grit-readers3.png'
           alt='Logo'
           width={250}
           height={50}
