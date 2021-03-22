@@ -1,23 +1,17 @@
-import React from 'react';
-import styles from './card.module.scss';
-import Image from 'next/image'
+import React from 'react'
+import styles from './card.module.scss'
 
-const Card = ({children}) => {
+const Card = ({ books, children }) => {
   return (
     <div className={styles.container}>
-      <Image
-        src='/images/portada-libro.jpg'
-        alt='Logo'
-        width={170}
-        height={260}
-      />
+      <img src={books.coverUrl} alt="Logo" />
       <div className={styles.infoBook}>
-        <h3>Awesome title book</h3>
-        <p>autor - name</p>
+        <h3>{books.title}</h3>
+        <p>{books.publisher}</p>
         {children}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
