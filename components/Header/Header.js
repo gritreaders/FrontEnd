@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,7 +7,11 @@ import Avatar from '../Avatar/Avatar'
 import SingInSingUp from '../SingInSingUp/SingInSingUp'
 
 const Header = () => {
-  const user = localStorage.getItem('user')
+  const [user,setUser]=useState(undefined)
+
+  useEffect (()=>{
+    setUser(localStorage.getItem('user'))
+  },[])
 
   return (
     <header className={styles.header}>
